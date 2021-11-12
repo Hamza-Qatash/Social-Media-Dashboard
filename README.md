@@ -14,7 +14,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Social Media Dashboard with dark/light theme. (HTML,  CSS,  JS) Languages.
+Social Media Dashboard with dark/light theme. (HTML,  SCSS,  JS) Languages.
 full responsive page with nice hover effects.
 
 <!-- CONTACT -->
