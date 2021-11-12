@@ -1,0 +1,61 @@
+@use "../util" as *;
+
+.toggle {
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    label {
+        font-size: rem(14);
+        font-weight: 700;
+        color: var(--toggle);
+
+        &[for="dark"] {
+            line-height: rem(24);
+            margin-right: rem(13);
+        }
+    }
+
+    &__wrapper {
+        height: rem(24);
+        position: relative;
+    }
+    input[type="radio"] {
+        margin: 0 rem(-2);
+        opacity: 0;
+        width: rem(24);
+        height: rem(24);
+    }
+
+    &__background {
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        border-radius: rem(12);
+        background: var(--toggle-bg);
+        pointer-events: none;
+    }
+
+    &__button {
+        position: absolute;
+        left: rem(3);
+        top: rem(3);
+        right: 100%;
+        width: rem(18);
+        height: rem(18);
+        border-radius: 50%;
+        background-color: var(--toggle-button);
+        transition: all 150ms ease-in-out;
+    }
+
+    #light:checked ~ .toggle__button {
+        // 24px - 3px => 21px => 1.3125rem
+        left: calc(100% - 1.3125rem);
+        right: rem(3);
+    }
+}
